@@ -661,16 +661,16 @@ input[type="text"]:focus, select:focus {
 
 /* 2. Pita Naik Maksimal ke Ujung - KODE AJAIB KAMU YANG BERHASIL */
 #riddle-container-2::before {
-    top: -40px !important; /* NAIKKAN MAKSIMAL DARI -50px */
-    left: -80px !important; /* GESER MAKSIMAL DARI -30px */
-    transform: rotate(330deg) !important; 
+    top: 0px !important; /* NAIKKAN MAKSIMAL DARI -50px */
+    left: 12px !important; /* GESER MAKSIMAL DARI -30px */
+    transform: translateY(-50%) rotate(-25deg);
     z-index: 30 !important; 
 }
 
 #riddle-container-2::after {
-    top: -40px !important; /* NAIKKAN MAKSIMAL */
-    right: -80px !important; /* GESER MAKSIMAL */
-    transform: rotate(30deg) !important; 
+    top: 0px !important; /* NAIKKAN MAKSIMAL */
+    right:12px !important; /* GESER MAKSIMAL */
+    transform: translateY(-50%) rotate(-25deg);
     z-index: 30 !important; 
 }
 /* --- AKHIR OVERRIDE FINAL --- */
@@ -787,4 +787,16 @@ input[type="text"]:focus, select:focus {
     
     animation: zoomFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+}
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll !important;
+        background-position: center top !important;
+    }
+}
+@media (max-width: 768px) {
+    #riddle-container-2::before,
+    #riddle-container-2::after {
+        top: -10px !important;
+    }
 }
